@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>予約管理システム 紹介</title>
+<style>
+  :root{--ink:#4a3440;--sub:#8a6b78;--line:#f0e2e5;--bg:#fdf8f8;--green:#8c5a70;--gold:#d68b9b;--gold2:#e8a9b5;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header.hero{background:linear-gradient(135deg,#fbe9ec 0%,#f6d9e0 55%,#eecbe0 100%);color:#4a3440;padding:72px 0 64px}
+  .eyebrow{font-size:12px;letter-spacing:.3em;color:var(--gold2)}
+  .hero h1{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;font-size:40px;line-height:1.4;font-weight:500;margin:12px 0 16px}
+  .hero p{font-size:16px;color:#7a5a68;max-width:640px}
+  section{padding:64px 0}
+  section + section{border-top:1px solid var(--line)}
+  .head{margin-bottom:28px}
+  .head .en{font-size:12px;letter-spacing:.25em;color:#c0707f}
+  .head h2{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;font-size:28px;font-weight:500;margin-top:6px}
+  .head p{color:var(--sub);margin-top:8px;font-size:15px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+  .shot{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(31,45,41,.06)}
+  .shot figcaption{font-size:13px;color:var(--sub);padding:12px 16px;border-top:1px solid var(--line)}
+  .shot img{width:100%}
+  .phone img{max-height:620px;width:auto;margin:0 auto;object-fit:contain}
+  .grid-shot img{width:100%}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+  .step .n{font-size:12px;color:#c0707f;letter-spacing:.15em}
+  .step h3{font-size:17px;margin:4px 0 6px}
+  .step p{font-size:14px;color:var(--sub)}
+  .features{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .feat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+  .feat h3{font-size:18px;margin-bottom:6px}
+  .feat p{font-size:14px;color:var(--sub)}
+  .feat .tag{display:inline-block;font-size:11px;letter-spacing:.1em;background:#fbeef2;color:#a0606f;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+  .promo img{width:100%;border-radius:14px;border:1px solid var(--line)}
+  footer{background:#8c5a70;color:#fbeef2;padding:36px 0;font-size:13px}
+  @media (max-width:820px){
+    .two{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .features{grid-template-columns:1fr}
+    .hero h1{font-size:30px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">ONLINE BOOKING & MANAGEMENT</div>
+    <h1>予約から来院、売上の確認まで。<br>ひとつの仕組みで。</h1>
+    <p>お客様はスマホからいつでも空き枠を選んで予約できます。院側は、予約・来院・キャンセルを一画面で管理し、売上や来院の傾向もそのまま確認できます。</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="head"><div class="en">FOR CUSTOMERS</div><h2>お客様の予約画面</h2><p>コースを選んで、空いている時間を選ぶだけ。ご予約までの流れは次の4ステップです。</p></div>
+    <div class="two">
+      <figure class="shot phone">
+        <img src="images/m_booking_1.png" alt="コースを選ぶ画面">
+        <figcaption>1. コースを選ぶ（30分〜120分）</figcaption>
+      </figure>
+      <figure class="shot grid-shot">
+        <img src="images/booking_grid_full.png" alt="空き時間の表">
+        <figcaption>2. 日時を選ぶ（○は予約できる時間、×は埋まっている時間）</figcaption>
+      </figure>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">STEP 1</div><h3>コースを選ぶ</h3><p>施術の長さに合わせて選びます。</p></div>
+      <div class="step"><div class="n">STEP 2</div><h3>日時を選ぶ</h3><p>15分刻みの空きから選べます。</p></div>
+      <div class="step"><div class="n">STEP 3</div><h3>お客様情報を入力</h3><p>お名前・ご連絡先・年齢層・ご来院のきっかけ・お悩みの部位を入力します。</p></div>
+      <div class="step"><div class="n">STEP 4</div><h3>予約完了</h3><p>内容を確認して、予約が完了します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head"><div class="en">FOR MANAGEMENT</div><h2>管理画面</h2><p>予約の確認、来院の記録、顧客の把握、売上の確認をひとつの画面で行えます。</p></div>
+    <figure class="shot" style="margin-bottom:24px">
+      <img src="images/sched.png" alt="予約管理の画面">
+      <figcaption>予約管理：日付ごとの予約を見て、来院・無断キャンセル・取消・削除をボタンで記録できます。電話予約もここから追加できます。</figcaption>
+    </figure>
+    <div class="two">
+      <figure class="shot">
+        <img src="images/cust.png" alt="顧客リストの画面">
+        <figcaption>顧客リスト：来院回数・最終来院・次回予約・無断キャンセルの回数を一覧で確認できます。</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/drawer.png" alt="お客様の詳細の画面">
+        <figcaption>お客様の詳細：来院の履歴、ご要望のメモを見られます。フォロー用の文面もコピーして送れます。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head"><div class="en">FEATURES</div><h2>できること</h2></div>
+    <div class="features">
+      <div class="feat"><span class="tag">予約</span><h3>24時間のネット予約</h3><p>お客様がスマホから好きな時間に予約できます。電話の対応を減らせます。</p></div>
+      <div class="feat"><span class="tag">予約</span><h3>15分刻みの空き管理</h3><p>施術の時間と片付けの時間を考えて、重ならない枠だけを表示します。</p></div>
+      <div class="feat"><span class="tag">売上・分析</span><h3>売上と来院の見える化</h3><p>前期比、時間帯別の予約、新規の割合、お悩みの内訳をグラフで確認できます。</p></div>
+      <div class="feat"><span class="tag">顧客</span><h3>顧客リストとフォロー</h3><p>来院回数や次回予約を把握し、フォロー文面をコピーして送れます。CSVでの書き出しにも対応しています。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head"><div class="en">OVERVIEW</div><h2>全体のイメージ</h2></div>
+    <div class="promo"><img src="images/promo_booking_admin.png" alt="予約管理システムの紹介"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">予約管理システム 紹介ページ（画面はサンプルのデータです）</div>
+</footer>
+
+</body>
+</html>
