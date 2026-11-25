@@ -87,7 +87,8 @@ section{padding:96px 0}
 .hx-dots{position:absolute;width:140px;height:140px;background-image:radial-gradient(rgba(201,127,144,.35) 2px,transparent 2px);background-size:16px 16px;z-index:0;pointer-events:none}
 .hx-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
 .hx-kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;color:#c97f90;background:#fff;padding:8px 16px;border-radius:999px;box-shadow:0 6px 16px rgba(78,58,69,.06)}
-.hx-h1{font-family:"Noto Serif JP",serif;font-size:clamp(36px,5vw,58px);line-height:1.2;margin:22px 0 18px;color:var(--ink)}
+.hx-h1 .l1{white-space:nowrap}
+.hx-h1{font-family:"Noto Serif JP",serif;font-size:clamp(28px,3.9vw,50px);line-height:1.2;margin:22px 0 18px;color:var(--ink)}
 .hx-h1 mark{background:linear-gradient(transparent 58%,#f7d3dc 58%);color:inherit;padding:0 4px}
 .hx-lead{font-size:16px;color:var(--sub);max-width:520px}
 .hx-phones{position:relative;height:520px}
@@ -122,6 +123,7 @@ section{padding:96px 0}
 .reasons div{padding:34px 28px 0 0;margin-top:0}
 .reasons div + div{padding-left:28px;border-left:1px solid var(--line)}
 .reasons .no{font-family:"Noto Serif JP",serif;font-size:14px;color:var(--rose);font-weight:700}
+.reasons .ri{width:104px;height:104px;object-fit:contain;margin-bottom:6px}
 .reasons h3{font-size:21px;margin:10px 0 12px}
 .reasons p{font-size:15px;color:var(--sub)}
 
@@ -146,7 +148,7 @@ section{padding:96px 0}
 .contact{background:var(--paper);border-top:1px solid var(--line);text-align:center;padding:100px 0}
 .contact h2{font-family:"Noto Serif JP",serif;font-size:clamp(30px,4vw,44px);margin:12px 0 18px}
 .contact p{color:var(--sub);margin-bottom:34px}
-.mail-box{display:inline-block;border:2px solid var(--plum);padding:20px 34px;font-size:20px;font-weight:700;text-decoration:none;color:var(--plum);letter-spacing:.02em}
+.mail-box{display:inline-block;max-width:100%;border:2px solid var(--plum);padding:20px 28px;font-size:clamp(15px,2.2vw,19px);font-weight:700;text-decoration:none;color:var(--plum);letter-spacing:.01em;word-break:break-all;overflow-wrap:anywhere}
 .mail-box:hover{background:var(--plum);color:var(--cream-t)}
 footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-align:center}
 
@@ -186,7 +188,7 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   <div class="wrap hx-grid">
     <div>
       <span class="hx-kicker">美容院・ネイル・リラク・まつげサロンへ</span>
-      <h1 class="hx-h1">お客様は<mark>スマホ</mark>で予約<br>お店は<mark>すっきり</mark><br>管理。</h1>
+      <h1 class="hx-h1"><span class="l1">お客様は<mark>スマホ</mark>で予約</span><br>お店は<mark>すっきり</mark><br>管理。</h1>
       <p class="hx-lead">ネット予約・来院の記録・顧客リスト・売上の確認まで、ひとつの仕組みで。大手予約サイトよりコストを抑えて、すぐに使えます。</p>
       <div class="cta" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px">
         <a class="btn" href="#menu">業種別のメニューを見る</a>
@@ -256,9 +258,9 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
       <h2 class="title serif">選ばれる、3つの理由。</h2>
     </div>
     <div class="reasons">
-      <div><div class="no">01</div><h3 class="serif">費用を抑えて始められる</h3><p>大手予約サイトに比べて費用を抑えられるので、個人のお店でも無理なく導入できます。</p></div>
-      <div><div class="no">02</div><h3 class="serif">すぐに使える</h3><p>専門の知識がなくても、メニューを入れればすぐに予約を受け付けられます。</p></div>
-      <div><div class="no">03</div><h3 class="serif">お店に合わせて組み替え</h3><p>業種・メニュー・料金・受付時間を、お店ごとに調整できます。</p></div>
+      <div><img class="ri" src="images/reason-cost.png" alt=""><div class="no">01</div><h3 class="serif">費用を抑えて始められる</h3><p>大手予約サイトに比べて費用を抑えられるので、個人のお店でも無理なく導入できます。</p></div>
+      <div><img class="ri" src="images/reason-quick.png" alt=""><div class="no">02</div><h3 class="serif">すぐに使える</h3><p>専門の知識がなくても、メニューを入れればすぐに予約を受け付けられます。</p></div>
+      <div><img class="ri" src="images/reason-custom.png" alt=""><div class="no">03</div><h3 class="serif">お店に合わせて組み替え</h3><p>業種・メニュー・料金・受付時間を、お店ごとに調整できます。</p></div>
     </div>
   </div>
 </section>
