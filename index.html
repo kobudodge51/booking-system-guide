@@ -56,23 +56,49 @@ section{padding:96px 0}
 .ind-tabs{display:flex;border-bottom:1px solid var(--line);margin-bottom:0}
 .ind-tabs button{flex:1;background:none;border:0;border-bottom:3px solid transparent;padding:16px 8px;font:inherit;font-size:15px;font-weight:700;color:var(--sub);cursor:pointer;letter-spacing:.04em}
 .ind-tabs button.on{color:var(--plum);border-bottom-color:var(--rose)}
-.menu-panel{display:grid;grid-template-columns:400px 1fr;background:var(--paper)}
-.menu-panel .shot{background:var(--plum);padding:30px;display:flex;align-items:center;justify-content:center}
-.menu-panel .shot img{width:100%;max-width:300px;height:560px;object-fit:cover;object-position:top;border:6px solid #3d2c38;border-radius:28px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
-.menu-body{padding:38px 44px 44px}
-.catnav{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:28px;scrollbar-width:none}
+.menu-panel{display:grid;grid-template-columns:330px 1fr;gap:40px;align-items:stretch}
+.menu-panel .shot{background:#fff;border-radius:26px;box-shadow:0 24px 50px rgba(78,58,69,.12);padding:14px;overflow:hidden}
+.menu-panel .shot img{width:100%;height:auto;display:block;border-radius:18px}
+.menu-body{background:#fff;border-radius:26px;box-shadow:0 24px 50px rgba(78,58,69,.08);padding:30px 36px;display:flex;flex-direction:column}
+.catnav-x{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:28px;scrollbar-width:none}
 .catnav::-webkit-scrollbar{display:none}
 .catnav a{flex:0 0 auto;text-decoration:none;font-size:13px;font-weight:700;padding:8px 16px;border:1px solid var(--plum);color:var(--plum);white-space:nowrap}
 .catnav a:hover{background:var(--plum);color:var(--cream-t)}
 .cat{margin-bottom:30px}
 .cat h3{font-family:"Noto Serif JP",serif;font-size:19px;color:var(--plum);padding-bottom:8px;border-bottom:2px solid var(--plum);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
 .cat h3 small{font-family:"Noto Sans JP",sans-serif;font-size:12px;color:var(--sub);font-weight:500}
-.item{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line)}
+.menu-body .list{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.item{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .n small:first-child{color:#c97f90;font-size:11px;letter-spacing:.08em;display:block;font-weight:700}
 .item .n{font-weight:700;font-size:15px}
 .item .n small{display:block;font-weight:500;color:var(--sub);font-size:12px;margin-top:2px}
 .item .p{font-weight:700;font-size:16px;white-space:nowrap;color:var(--plum)}
 .item .p span{font-size:12px;font-weight:500;color:var(--sub);margin-left:2px}
-.note{margin-top:22px;padding:16px 18px;background:var(--rose-s);font-size:13px;color:var(--plum);line-height:1.8}
+.note{margin-top:18px;padding:16px 18px;background:var(--rose-s);font-size:13px;color:var(--plum);line-height:1.8}
+
+
+/* 紹介ページ冒頭（パステル） */
+.hx{background:var(--cream);padding:76px 0 60px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hx-blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75;z-index:0;pointer-events:none}
+.hx-blob.a{width:420px;height:420px;background:#fbe3e8;top:-120px;right:-100px}
+.hx-blob.b{width:300px;height:300px;background:#ece4f3;bottom:-60px;left:-80px}
+.hx-ring{position:absolute;border:2px solid rgba(201,127,144,.25);border-radius:50%;z-index:0;pointer-events:none}
+.hx-dots{position:absolute;width:140px;height:140px;background-image:radial-gradient(rgba(201,127,144,.35) 2px,transparent 2px);background-size:16px 16px;z-index:0;pointer-events:none}
+.hx-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
+.hx-kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;color:#c97f90;background:#fff;padding:8px 16px;border-radius:999px;box-shadow:0 6px 16px rgba(78,58,69,.06)}
+.hx-h1{font-family:"Noto Serif JP",serif;font-size:clamp(36px,5vw,58px);line-height:1.2;margin:22px 0 18px;color:var(--ink)}
+.hx-h1 mark{background:linear-gradient(transparent 58%,#f7d3dc 58%);color:inherit;padding:0 4px}
+.hx-lead{font-size:16px;color:var(--sub);max-width:520px}
+.hx-phones{position:relative;height:520px}
+.hx-ph{position:absolute;width:230px;height:500px;border-radius:34px;border:8px solid #fff;box-shadow:0 30px 60px rgba(78,58,69,.18);overflow:hidden;background:#fff}
+.hx-ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.hx-ph.h1{left:0;top:40px;transform:rotate(-6deg)}
+.hx-ph.h2{left:150px;top:0;z-index:2;width:250px;height:520px}
+.hx-ph.h3{left:300px;top:70px;transform:rotate(6deg)}
+.hx-sticker{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;font-weight:700;font-size:15px;box-shadow:0 14px 30px rgba(78,58,69,.12);z-index:4}
+.hx-sticker b{color:#c97f90;font-size:22px}
+@media (max-width:900px){.hx-grid{grid-template-columns:1fr}.hx-phones{height:460px}}
 
 /* 管理画面（ハイコントラスト） */
 .dark{background:var(--plum);color:var(--cream-t)}
@@ -125,9 +151,9 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
 @media (max-width:900px){
   .hero h1{white-space:normal}
   nav.bar ul{display:none}
-  .hero-grid,.cost-grid,.shots,.menu-panel{grid-template-columns:1fr}
+  .cost-grid,.shots,.menu-panel{grid-template-columns:1fr}
+  .menu-panel .shot{max-width:330px;margin:0 auto}
   .hero figure img{height:420px}
-  .menu-panel .shot img{height:460px}
   .reasons,.flow{grid-template-columns:1fr}
   .reasons div + div,.flow div + div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:24px}
   .menu-body{padding:28px 22px}
@@ -150,21 +176,27 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   </div>
 </nav>
 
-<header class="hero">
-  <div class="wrap hero-grid">
+<header class="hero hx">
+  <div class="hx-blob a"></div><div class="hx-blob b"></div>
+  <div class="hx-ring" style="width:260px;height:260px;top:90px;left:44%"></div>
+  <div class="hx-dots" style="top:60px;right:40px"></div>
+  <div class="wrap hx-grid">
     <div>
-      <div class="eyebrow">BEAUTY · NAIL · RELAX · EYELASH</div>
-      <h1 class="serif">予約も、お店の管理も。<br><em>落ち着いて</em><br>任せられます。</h1>
-      <p class="lead">お客様はスマホでいつでも予約でき、お店は予約・来院・顧客・売上をひとつの画面で確認できます。大手予約サイトより費用を抑えて、すぐに始められます。</p>
-      <div class="cta">
+      <span class="hx-kicker">美容院・ネイル・リラク・まつげサロンへ</span>
+      <h1 class="hx-h1">お客様は<mark>スマホ</mark>で予約<br>お店は<mark>すっきり</mark><br>管理。</h1>
+      <p class="hx-lead">ネット予約・来院の記録・顧客リスト・売上の確認まで、ひとつの仕組みで。大手予約サイトよりコストを抑えて、すぐに使えます。</p>
+      <div class="cta" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px">
         <a class="btn" href="#menu">業種別のメニューを見る</a>
         <a class="btn line" href="mailto:hikari.partners.gifu@gmail.com">お問い合わせ</a>
       </div>
     </div>
-    <figure>
-      <img src="images/b_menu_beauty.png" alt="美容室メニューの予約画面">
-      <figcaption>お客様の予約画面（美容室の例）</figcaption>
-    </figure>
+    <div class="hx-phones">
+      <div class="hx-ph h1"><img src="images/b_menu_beauty.png" alt="美容室メニューの予約画面"></div>
+      <div class="hx-ph h2"><img src="images/b_menu_nail.png" alt="ネイルメニューの予約画面"></div>
+      <div class="hx-ph h3"><img src="images/b_menu_lash.png" alt="アイラッシュメニューの予約画面"></div>
+      <div class="hx-sticker" style="left:-10px;bottom:30px;transform:rotate(-4deg)"><b>24h</b> ネット予約</div>
+      <div class="hx-sticker" style="right:-6px;top:10px;transform:rotate(5deg)">売上・来院を<b>一目で</b></div>
+    </div>
   </div>
 </header>
 
@@ -272,39 +304,48 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
 
 <script>
 const IND = [
-  { img:'images/b_menu_beauty.png', name:'美容室', cats:[
-    {k:'cut', t:'カット', items:[['カット','ご希望のスタイルに合わせて',4000],['カット＋シャンプー','仕上がりまで丁寧に',4500],['前髪カット','',1000],['眉カット','',1000]]},
-    {k:'color', t:'カラー', items:[['リタッチカラー','生え際の気になる部分だけ','4,800'],['全体カラー','髪の長さで料金が変わります',5500],['ハイライト','明るさと立体感を',6000]]},
-    {k:'perm', t:'パーマ', items:[['パーマ','シャンプー・ブロー込み',7500],['ポイントパーマ','気になる部分だけ',6000]]},
-    {k:'treat', t:'トリートメント', items:[['ダブルリペアトリートメント','髪のダメージケアに',2200],['髪質改善トリートメント','うるおいと艶を長く',4400]]},
-    {k:'other', t:'その他', items:[['シャンプーブロー','',2000]]}
-  ], note:'料金は税込・仮の表示です。土日祝は＋300円（例）。' },
-  { img:'images/b_menu_nail.png', name:'ネイル', cats:[
-    {k:'color', t:'カラー', items:[['ワンカラー','ベーシックな一色',4000],['ジェルネイル','艶と持ちのよい仕上がり',5500],['フレンチ','清潔感のある定番',6000]]},
-    {k:'art', t:'アート', items:[['ワンポイントアート','1本から',500],['フルアート','季節やイベントに',8000]]},
-    {k:'care', t:'オフ・ケア', items:[['ジェルオフ','他店からのオフもお受けします',1000],['甘皮ケア','',1500]]},
-    {k:'foot', t:'フット', items:[['フットケア','角質・甘皮のケア',4000],['フットジェル','',5000]]}
-  ], note:'料金は税込・仮の表示です。デザインにより料金が変わる場合があります。' },
-  { img:'images/b_menu_relax.png', name:'リラクゼーション', cats:[
-    {k:'body', t:'ボディ', items:[['リラクゼーション 60分','全身をゆっくりほぐします',6000],['リラクゼーション 90分','',8500],['ヘッドケア 45分','頭・首・肩を中心に',4500]]},
-    {k:'aroma', t:'アロマ', items:[['アロマ 60分','香りとともに',6500],['アロマ 90分','',9000]]},
-    {k:'part', t:'部分', items:[['肩・首 30分','デスクワークの方に',3500]]},
-    {k:'foot', t:'フット', items:[['フット 40分','足もとから整えます',4000]]}
+  { img:'images/b_menu_beauty.png', name:'美容室', items:[
+    ['カット 30分','カット','ご希望のスタイルに合わせて'],
+    ['カット＋カラー 60分','カラー','カットと全体カラーのセット'],
+    ['トリートメント 45分','トリートメント','髪のダメージケア'],
+    ['ヘッドスパ 60分','スパ','頭皮からすっきり整えます'],
+    ['縮毛矯正 90分','縮毛矯正','くせを抑えてまとまりやすく'],
+    ['ヘアセット 45分','セット','イベントや式典のスタイリング'],
+    ['カラー＋パーマ 120分','複合','カラーとパーマをまとめて']
   ], note:'料金は税込・仮の表示です。' },
-  { img:'images/b_menu_lash.png', name:'アイラッシュ', cats:[
-    {k:'lash', t:'まつげ', items:[['パリジェンヌ 60分','自然なカールに',6500],['まつげエクステ 90分','ナチュラルからボリュームまで',8000],['ボリューム 90分','',9500]]},
-    {k:'off', t:'オフ・付け直し', items:[['オフ','',1000],['付け直し 60分','',6000]]},
-    {k:'care', t:'ケア', items:[['まつげ美容液ケア','',2500]]}
+  { img:'images/b_menu_nail.png', name:'ネイル', items:[
+    ['ワンカラー 45分','カラー','ベーシックな一色'],
+    ['ジェル 60分','ジェル','艶と持ちのよい仕上がり'],
+    ['アート 75分','アート','デザインを一本ずつ'],
+    ['ケア 30分','ケア','甘皮と爪のケア'],
+    ['フット 60分','フット','足もとからすっきり'],
+    ['オフ 30分','オフ','他店からのオフもお受けします'],
+    ['ネイル＋まつげ 90分','複合','ネイルとまつげをまとめて']
+  ], note:'料金は税込・仮の表示です。' },
+  { img:'images/b_menu_relax.png', name:'リラクゼーション', items:[
+    ['ライト 30分','ライト','肩・首を中心に短時間で'],
+    ['ボディ 60分','ボディ','全身をゆっくりほぐします'],
+    ['リラックス 90分','リラックス','じっくり心身を休める'],
+    ['アロマ 75分','アロマ','香りとともに'],
+    ['ヘッド 45分','ヘッド','頭・首・肩のケア'],
+    ['ストレッチ 60分','ストレッチ','体の可動域を広げます'],
+    ['フルコース 120分','フルコース','全身と足もとまで']
+  ], note:'料金は税込・仮の表示です。' },
+  { img:'images/b_menu_lash.png', name:'アイラッシュ', items:[
+    ['まつげパーマ 60分','パーマ','自然なカールに'],
+    ['まつげエクステ 90分','エクステ','ナチュラルからボリュームまで'],
+    ['オフ＆付け直し 60分','付け直し','オフと付け直しをまとめて'],
+    ['ボリューム 90分','ボリューム','華やかな仕上がり'],
+    ['ケア 30分','ケア','まつげの美容液ケア'],
+    ['パリジェンヌ 75分','パリジェンヌ','上向きの自然なカール'],
+    ['フルセット 120分','フルセット','オフ・付け直し・ケアまで']
   ], note:'料金は税込・仮の表示です。付け直しの期間により料金が変わります。' }
 ];
+const PRICES=[3000,4000,5000,6000,7000,8000,9000];
 const tabs=[...document.querySelectorAll('#tabs button')];
 function renderMenu(d){
-  const nav='<div class="catnav">'+d.cats.map(c=>'<a href="#cat-'+c.k+'">'+c.t+'</a>').join('')+'</div>';
-  const body=d.cats.map(c=>'<div class="cat" id="cat-'+c.k+'"><h3>'+c.t+'</h3>'+c.items.map(i=>{
-    const price=typeof i[2]==='number'?i[2].toLocaleString():i[2];
-    return '<div class="item"><div class="n">'+i[0]+(i[1]?'<small>'+i[1]+'</small>':'')+'</div><div class="p">'+price+'<span>円</span></div></div>';
-  }).join('')+'</div>').join('');
-  document.getElementById('menuBody').innerHTML=nav+body+'<div class="note">'+d.note+'</div>';
+  const rows=d.items.map((it,i)=>'<div class="item"><div class="n"><small>'+it[1]+'</small>'+it[0]+'<small>'+it[2]+'</small></div><div class="p">'+PRICES[i].toLocaleString()+'<span>円</span></div></div>').join('');
+  document.getElementById('menuBody').innerHTML='<div class="list">'+rows+'</div><div class="note">'+d.note+'</div>';
 }
 tabs.forEach(b=>b.addEventListener('click',()=>{
   const d=IND[+b.dataset.i];
