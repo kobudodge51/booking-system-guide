@@ -101,19 +101,21 @@ section{padding:96px 0}
 @media (max-width:900px){.hx-grid{grid-template-columns:1fr}.hx-phones{height:460px}}
 
 /* 管理画面（ハイコントラスト） */
-.dark{background:var(--plum);color:var(--cream-t)}
-.dark .label{color:#c9a9b6}
-.dark .desc{color:#cbbcc4}
-.dark .title{color:#fff}
+.tint-paper{background:#fffdfa}
+.tint-cream{background:#faf5f0}
+.tint-lav{background:#efe8f5}
+.tint-rose{background:#f6e7eb}
+.tint-rose .label{color:#b5697b}
+.tint-rose .desc{color:var(--sub)}
 .shots{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.shots figure{background:var(--plum2);overflow:hidden}
+.shots figure{background:#fff;overflow:hidden;border-radius:4px;box-shadow:0 18px 40px rgba(78,58,69,.10)}
 .shots .frame{height:340px;overflow:hidden;background:#fff}
 .shots .frame img{width:100%;height:100%;object-fit:cover;object-position:top left}
 .shots figure.wide{grid-column:1/-1}
 .shots figure.wide .frame{height:400px}
 .shots figcaption{padding:20px 24px 24px}
-.shots figcaption b{display:block;font-family:"Noto Serif JP",serif;font-size:19px;color:#fff;margin-bottom:6px}
-.shots figcaption span{font-size:14px;color:#d8cad1}
+.shots figcaption b{display:block;font-family:"Noto Serif JP",serif;font-size:19px;color:var(--ink);margin-bottom:6px}
+.shots figcaption span{font-size:14px;color:var(--sub)}
 
 /* 理由 */
 .reasons{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--plum)}
@@ -133,11 +135,11 @@ section{padding:96px 0}
 .cost li span{font-weight:500;font-size:14px;opacity:.9}
 
 /* 流れ */
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--plum)}
-.flow div{padding:28px 22px 0 0}
-.flow div + div{padding-left:22px;border-left:1px solid var(--line)}
-.flow .s{font-family:"Noto Serif JP",serif;color:var(--rose);font-weight:700;font-size:14px}
-.flow h3{font-size:18px;margin:8px 0 6px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fcard{background:#fff;border-radius:28px;padding:30px 24px 28px;box-shadow:0 18px 40px rgba(78,58,69,.08);text-align:left}
+.fcard .fi{width:118px;height:118px;object-fit:contain;margin:0 0 16px}
+.flow .s{font-family:"Noto Serif JP",serif;color:#c97f90;font-weight:700;font-size:13px;letter-spacing:.08em}
+.flow h3{font-size:19px;margin:6px 0 8px}
 .flow p{font-size:14px;color:var(--sub)}
 
 /* 問い合わせ */
@@ -154,8 +156,9 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   .cost-grid,.shots,.menu-panel{grid-template-columns:1fr}
   .menu-panel .shot{max-width:330px;margin:0 auto}
   .hero figure img{height:420px}
-  .reasons,.flow{grid-template-columns:1fr}
-  .reasons div + div,.flow div + div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:24px}
+  .reasons{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .reasons div + div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:24px}
   .menu-body{padding:28px 22px}
   section{padding:70px 0}
 }
@@ -200,7 +203,7 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   </div>
 </header>
 
-<section id="menu" style="padding-bottom:0">
+<section id="menu" class="tint-paper" style="padding-bottom:0">
   <div class="wrap">
     <div class="head">
       <div class="label">MENU</div>
@@ -222,7 +225,7 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   </div>
 </section>
 
-<section id="admin" class="dark">
+<section id="admin" class="tint-rose">
   <div class="wrap">
     <div class="head">
       <div class="label">FOR MANAGEMENT</div>
@@ -246,7 +249,7 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   </div>
 </section>
 
-<section id="reasons">
+<section id="reasons" class="tint-cream">
   <div class="wrap">
     <div class="head">
       <div class="label">WHY US</div>
@@ -274,17 +277,17 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   </div>
 </section>
 
-<section id="flow">
+<section id="flow" class="tint-lav">
   <div class="wrap">
     <div class="head">
       <div class="label">HOW IT WORKS</div>
       <h2 class="title serif">導入の流れ</h2>
     </div>
     <div class="flow">
-      <div><div class="s">STEP 01</div><h3 class="serif">ご相談</h3><p>お店の業種と、今の予約方法を伺います。</p></div>
-      <div><div class="s">STEP 02</div><h3 class="serif">メニューの設定</h3><p>コース名・内容・料金を一緒に組み立てます。</p></div>
-      <div><div class="s">STEP 03</div><h3 class="serif">予約ページの公開</h3><p>お客様がいつでも予約できる状態にします。</p></div>
-      <div><div class="s">STEP 04</div><h3 class="serif">運用スタート</h3><p>予約の管理と売上の確認を始めます。</p></div>
+      <div class="fcard"><img class="fi" src="images/step-1-consult.png" alt=""><div class="s">STEP 01</div><h3 class="serif">ご相談</h3><p>お店の業種と、今の予約方法を伺います。</p></div>
+      <div class="fcard"><img class="fi" src="images/step-2-menu.png" alt=""><div class="s">STEP 02</div><h3 class="serif">メニューの設定</h3><p>コース名・内容・料金を一緒に組み立てます。</p></div>
+      <div class="fcard"><img class="fi" src="images/step-3-publish.png" alt=""><div class="s">STEP 03</div><h3 class="serif">予約ページの公開</h3><p>お客様がいつでも予約できる状態にします。</p></div>
+      <div class="fcard"><img class="fi" src="images/step-4-operate.png" alt=""><div class="s">STEP 04</div><h3 class="serif">運用スタート</h3><p>予約の管理と売上の確認を始めます。</p></div>
     </div>
   </div>
 </section>
