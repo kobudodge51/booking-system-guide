@@ -88,8 +88,14 @@ section{padding:96px 0}
 .hx-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
 .hx-kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;color:#c97f90;background:#fff;padding:8px 16px;border-radius:999px;box-shadow:0 6px 16px rgba(78,58,69,.06)}
 .hx-h1 .l1{white-space:nowrap;display:inline-block}
-.hx-photo{position:absolute;inset:0;background:url(images/hero-salon.jpg) center/cover no-repeat;opacity:.85;z-index:0;pointer-events:none}
-.hx::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,245,240,.8) 0%,rgba(250,245,240,.45) 50%,rgba(250,245,240,.1) 100%);z-index:1;pointer-events:none}
+.hx-photo{position:absolute;inset:0;background:url(images/hero-salon.jpg) center/cover no-repeat;opacity:1;z-index:0;pointer-events:none}
+.hx::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,14,20,.72) 0%,rgba(24,14,20,.42) 55%,rgba(24,14,20,.12) 100%);z-index:1;pointer-events:none}
+.hx .hx-h1{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.55)}
+.hx .hx-h1 mark{color:#fff;background:linear-gradient(transparent 58%,rgba(217,137,155,.85) 58%)}
+.hx .hx-lead{color:#fbf4f6;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.hx .btn{background:#fff;color:var(--plum);box-shadow:0 10px 26px rgba(0,0,0,.3);font-size:16px;padding:17px 34px}
+.hx .btn.line{background:rgba(24,14,20,.35);color:#fff;border:2px solid #fff;box-shadow:none}
+.hx .btn.line:hover,.hx .btn:hover{background:#f4c4cf;color:var(--plum)}
 .hx-h1{font-family:"Noto Serif JP",serif;font-size:clamp(28px,3.9vw,50px);line-height:1.2;margin:22px 0 18px;color:var(--ink)}
 .hx-h1 mark{background:linear-gradient(transparent 58%,#f7d3dc 58%);color:inherit;padding:0 4px}
 .hx-lead{font-size:16px;color:var(--sub);max-width:520px}
@@ -164,8 +170,7 @@ footer{background:var(--plum);color:#b9a8b1;font-size:12px;padding:28px 0;text-a
   .flow{grid-template-columns:1fr 1fr}
   .reasons div + div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:24px}
   .reasons .ri,.fcard .fi{width:104px;height:104px}
-  .hx::after{background:linear-gradient(180deg,rgba(250,245,240,.7) 0%,rgba(250,245,240,.5) 45%,rgba(250,245,240,.25) 100%)}
-  .hx-photo{opacity:.9}
+  .hx::after{background:linear-gradient(180deg,rgba(24,14,20,.6) 0%,rgba(24,14,20,.5) 50%,rgba(24,14,20,.35) 100%)}
   .hx-phones{width:560px;height:520px;transform:scale(.6);transform-origin:top left;margin:0 0 -210px}
   .hx-h1 .l1{font-size:clamp(24px,7.4vw,34px)}
   .menu-body{padding:28px 22px}
